@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Chabih Portfolio</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/writertype.css"/>
+    <script src="js/message.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/text.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+<div class="container anim">
+    <div class="left-side">
+        <div class="logo">
+            <img src="img/logo-small.png"/>
+            <span>CHABIH</span>
+        </div>
+        <div class="menu">
+            <!-- prettier-ignore -->
+            <div class="menu-item" onclick="animation(); show('home');">
+                <span id="home-item">HOME</span>
+                <img src="img/home.png" id="home-img"/>
+            </div>
+            <!-- prettier-ignore -->
+            <div class="menu-item" onclick="animation(); show('user')">
+                <span id="user-item">ABOUT</span>
+                <img src="img/user-inactive.png" id="user-img"/>
+            </div>
+            <!-- prettier-ignore -->
+            <div class="menu-item" onclick="animation(); show('skills')">
+                <span id="skills-item">SKILLS</span>
+                <img src="img/skills-inactive.png" id="skills-img"/>
+            </div>
+            <!-- prettier-ignore -->
+            <div class="menu-item" onclick="animation(); show('work')">
+                <span id="work-item">WORK</span>
+                <img src="img/work-inactive.png" id="work-img"/>
+            </div>
+            <!-- prettier-ignore -->
+            <!--<div class="menu-item" onclick="animation(); show('contact')">
+                <span id="contact-item">CONTACT</span>
+                <img src="img/contact-inactive.png" id="contact-img"/>
+            </div>-->
+        </div>
+    </div>
+    <div class="content anim" id="home">
+        <span class="html-style body1">&lt;body&gt;</span>
+        <div class="text-zone">
+            <span class="html-style h11">&lt;h1&gt;</span>
+            <h1>Hi,</h1>
+            <h1>
+                I'm <img style="width: 35px;" src="img/A2.png"/>yyoube,
+            </h1>
+            <!-- prettier-ignore -->
+            <h1>I <span style="font-family: 'LaBelleAurore';">design</span> and develop <span id="messenger"></span>
+            </h1>
+            <span class="html-style h12">&nbsp;&lt;/h1&gt;</span><br/>
+            <span class="text-descript"
+            >Junior Full Stack Development Student</span
+            >
+            <button onclick="animation(); show('skills')">CONTACT ME</button>
+        </div>
+        <span class="html-style body2">&lt;/body&gt;</span>
+        <img class="logo-img" src="img/logo.png"/>
+    </div>
+    <div class="content hidden anim " id="user">
+        <span class="html-style body1">&lt;body&gt;</span>
+        <div class="text-zone">
+            <span class="html-style h11">&lt;h1&gt;</span>
+            <h1>About me</h1>
+            <span class="html-style h12">&nbsp;&lt;/h1&gt;</span><br/>
+            <div class="text">
+                I'm Ayyoube Chabih. I'm 2rd year student specialised
+                Master Quality of Software at the FSDM (Faculty of
+                Sciences Dhar El Mehraz) of Fez (Morocco).
+                <br/><br/>
+                Well-organised person, problem solver, independent with
+                high attention to detail. Interested in the entire in
+                building softwares, web developement spectrum and
+                working on ambitious projects with positive people.
+                <br/><br/>
+                I love building things, working in a groupe and I'm most
+                attracted to solving problems.
+            </div>
+        </div>
+        <span class="html-style body2">&lt;/body&gt;</span>
+        <p class="line-1 anim-typewriter">
+                    <span style="color: #feb62c;">console</span
+                    ><span style="color: #6182b8;">.log(</span
+        ><span style="color: #91b859;">'Chabih Ayyoube'</span
+        ><span style="color: #6182b8;">);</span>
+        </p>
+    </div>
+    <div class="content hidden anim" id="skills">
+        <span class="html-style body1">&lt;body&gt;</span>
+        <div class="text-zone">
+            <span class="html-style h11">&lt;h1&gt;</span>
+            <h1>Skills</h1>
+            <span class="html-style h12">&nbsp;&lt;/h1&gt;</span><br/>
+            <div class="text">
+                <p>
+                    The main area of my expertise is front end
+                    development (client side of the web).
+                </p>
+                <p>
+                    HTML, CSS, JS (TypeScript), building small and
+                    medium web apps with Angular 2+, animations, and
+                    coding interactive layouts.
+                </p>
+                <p>
+                    I am also full-stack developer with Node.js,
+                    Java/JavaEE, Spring, JSF, and Struts2.
+                </p>
+                <p>
+                    Visit my
+                    <a
+                            href="https://www.linkedin.com/in/ayyoube-chabih"
+                            target="_blank"
+                    >LinkedIn </a
+                    >profile for more details or my
+                    <a
+                            href="https://github.com/AyyoubeChabih"
+                            target="_blank"
+                    >Github </a
+                    >profile to see my code.
+                </p>
+            </div>
+        </div>
+        <span class="html-style body2">&lt;/body&gt;</span>
+        <canvas></canvas>
+    </div>
+    <div class="content hidden anim" id="work">
+        <div class="row">
+            <div class="col">
+                <div
+                        class="image"
+                        onclick="openModal('myModal1');currentSlide(1, 'mySlides1')"
+                >
+                    <img src="img/cbsc/cb.png"/>
+                    <div class="middle">
+                        <div class="text2">VIEW</div>
+                    </div>
+                </div>
+                <span>
+                            <b>Creative Brains</b>
+                        </span>
+                <p>
+                    A mobile social network application dedicated to
+                    creative people.
+                </p>
+            </div>
+
+            <div class="col">
+                <div
+                        class="image"
+                        onclick="openModal('myModal2');currentSlide(1, 'mySlides2')"
+                >
+                    <img src="img/docs/doc.png"/>
+                    <div class="middle">
+                        <div class="text2">VIEW</div>
+                    </div>
+                </div>
+                <span>
+                            <b>Technologies Docs</b>
+                        </span>
+                <p>
+                    A SPA application documentation on some technologies
+                    for developement.
+                </p>
+            </div>
+            <div class="col">
+                <div
+                        class="image"
+                        onclick="openModal('myModal3');currentSlide(1, 'mySlides3')"
+                >
+                    <img src="img/dtravel/dtravel.jpg"/>
+                    <div class="middle">
+                        <div class="text2">VIEW</div>
+                    </div>
+                </div>
+                <span><b>DTravel</b></span>
+                <p>
+                    A web platform that provides most of the services a tourist needs (Creation Research Evaluation
+                    sharing of routes etc.)
+                </p>
+            </div>
+            <div class="col">
+                <div
+                        class="image"
+                        onclick="openModal('myModal4');currentSlide(1, 'mySlides4')"
+                >
+                    <img src="img/giftedHand/gh.png"/>
+                    <div class="middle">
+                        <div class="text2">VIEW</div>
+                    </div>
+                </div>
+                <span><b>GiftedHand</b></span>
+                <p>
+                    A UI Design and prototyping for a platform that allows to make known and enhance the value of
+                    handicrafts in Morocco.
+
+                </p>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+
+        <div class="modal-content" id="myModal1">
+                    <span class="close cursor" onclick="closeModal('myModal1')"
+                    >&times;</span
+                    >
+            <div class="mySlides mySlides1">
+                <div class="numberText">1 / 7</div>
+                <img src="img/cbsc/p1.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">2 / 7</div>
+                <img src="img/cbsc/p2.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">3 / 7</div>
+                <img src="img/cbsc/p3.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">4 / 7</div>
+                <img src="img/cbsc/p4.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">5 / 7</div>
+                <img src="img/cbsc/p5.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">6 / 7</div>
+                <img src="img/cbsc/p6.png"/>
+            </div>
+
+            <div class="mySlides mySlides1">
+                <div class="numberText">7 / 7</div>
+                <img src="img/cbsc/p7.png"/>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 'mySlides1')"
+            >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'mySlides1')"
+            >&#10095;</a
+            >
+
+            <div class="caption-container">
+                <p class="caption">
+                    <a
+                            href="https://github.com/AyyoubeChabih/Creative-Brains-app"
+                            target="_blank"
+                    >See Code</a
+                    >
+                </p>
+            </div>
+        </div>
+
+        <div class="modal-content" id="myModal3">
+                    <span class="close cursor" onclick="closeModal('myModal3')"
+                    >&times;</span
+                    >
+            <div class="mySlides mySlides3">
+                <div class="numberText">1 / 8</div>
+                <img src="img/dtravel/1.jpg"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">2 / 8</div>
+                <img src="img/dtravel/2.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">3 / 8</div>
+                <img src="img/dtravel/3.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">4 / 8</div>
+                <img src="img/dtravel/4.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">5 / 8</div>
+                <img src="img/dtravel/5.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">6 / 8</div>
+                <img src="img/dtravel/6.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">7 / 8</div>
+                <img src="img/dtravel/7.png"/>
+            </div>
+
+            <div class="mySlides mySlides3">
+                <div class="numberText">8 / 8</div>
+                <img src="img/dtravel/8.jpg"/>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 'mySlides3')"
+            >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'mySlides3')"
+            >&#10095;</a
+            >
+
+            <div class="caption-container">
+                <p class="caption">
+                    <a
+                            href="https://github.com/AzarouAmine/dtravel"
+                            target="_blank"
+                    >See Code</a
+                    >
+                    |
+                    <a
+                            href="https://dtravel.herokuapp.com/?fbclid=IwAR27cS4vw7LN7UNpZNKRHbbE_z7Wmpza1b0l0huEoZN6Py8ZJQzW9RmHA_8"
+                            target="_blank"
+                    >See Demo (Password : dtravelmql2018)</a
+                    >
+                </p>
+            </div>
+        </div>
+
+        <div class="modal-content" id="myModal2">
+                    <span class="close cursor" onclick="closeModal('myModal2')"
+                    >&times;</span
+                    >
+            <div class=" mySlides mySlides2">
+                <div class="numberText">1 / 5</div>
+                <img src="img/docs/1.png"/>
+            </div>
+
+            <div class="mySlides mySlides2">
+                <div class="numberText">2 / 5</div>
+                <img src="img/docs/2.png"/>
+            </div>
+
+            <div class="mySlides mySlides2">
+                <div class="numberText">3 / 5</div>
+                <img src="img/docs/3.png"/>
+            </div>
+
+            <div class="mySlides mySlides2">
+                <div class="numberText">4 / 5</div>
+                <img src="img/docs/4.png"/>
+            </div>
+
+            <div class="mySlides mySlides2">
+                <div class="numberText">5 / 5</div>
+                <img src="img/docs/5.png"/>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 'mySlides2')"
+            >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'mySlides2')"
+            >&#10095;</a
+            >
+
+            <div class="caption-container">
+                <p class="caption">
+                    <a
+                            href="https://github.com/AyyoubeChabih/ChabihsDocs"
+                            target="_blank"
+                    >See Code</a
+                    >
+                    |
+                    <a
+                            href="https://ayyoubechabih.github.io/ChabihsDocs/"
+                            target="_blank"
+                    >See Demo</a
+                    >
+                </p>
+            </div>
+        </div>
+        <div class="modal-content" id="myModal4">
+                    <span class="close cursor" onclick="closeModal('myModal4')"
+                    >&times;</span
+                    >
+            <div class=" mySlides mySlides4">
+                <div class="numberText">1 / 7</div>
+                <img src="img/giftedHand/1.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">2 / 7</div>
+                <img src="img/giftedHand/2.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">3 / 7</div>
+                <img src="img/giftedHand/3.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">4 / 7</div>
+                <img src="img/giftedHand/4.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">5 / 7</div>
+                <img src="img/giftedHand/5.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">6 / 7</div>
+                <img src="img/giftedHand/6.png"/>
+            </div>
+
+            <div class="mySlides mySlides4">
+                <div class="numberText">7 / 7</div>
+                <img src="img/giftedHand/7.png"/>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 'mySlides4')"
+            >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'mySlides4')"
+            >&#10095;</a
+            >
+
+            <div class="caption-container">
+                <p class="caption">
+                    GiftedHand
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--<div class="content" id="contact"></div>-->
+</div>
+<div class="slide1" id="slide1"></div>
+<div class="slide2" id="slide2"></div>
+</body>
+</html>
